@@ -36,7 +36,22 @@ npx cypress open
 * 自定义一个测试用例
 
 测试的接口借鉴mocha，例如describe()，context()，it()，beforeEach()。
+```
+describe('My First Test', function() {
+  beforeEach(function () {
+    cy.visit('https://www.amazon.com/')
+  })
 
+
+  it('should login failed with error account', function () {
+    cy.get('#nav-your-amazon').click()
+    cy.get('#ap_email').type('hhhh@gmail.com')
+    cy.get('#ap_password').type('1234')
+    cy.get('#signInSubmit').click()
+    cy.get('#auth-error-message-box').should('be.visible')
+  })
+});
+```
 
 更多的与页面元素的交互，这里就不赘述，可以参考官网。
 
@@ -49,7 +64,7 @@ cy.get('form').should('have.class', 'form-horizontal')
 cy.get('input').should('not.have.value', 'US')
 ```
 ## cypress持续集成
-* 我们起服务需要一些时间，什么时候开始执行cypress？
+* 起服务需要一些时间，什么时候开始执行cypress。
 
 ## 最佳实践
 
