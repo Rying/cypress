@@ -1,5 +1,7 @@
 .idea/
 node_modules/
 .idea/vcs.xml
+cypress/.DS_Store
+cypress/integration/.DS_Store
 
 
