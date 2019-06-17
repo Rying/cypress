@@ -64,9 +64,9 @@ cy.get('form').should('have.class', 'form-horizontal')
 cy.get('input').should('not.have.value', 'US')
 ```
 ## cypress持续集成
-* 起服务需要一些时间，什么时候开始执行cypress。
+官网有一些持续集成的用例可[参考](https://docs.cypress.io/guides/guides/continuous-integration.html#Boot-your-server)
 
-## 最佳实践
+## cypress有哪些最佳实践
 
 * 测试登录状态的管理
 反模式：界面交互方式登陆，并且没有存储登陆状态
@@ -112,6 +112,16 @@ button.click()
 * 设置baseUrl
 反模式：在cy.visit()中使用baseUrl。
 最佳实践：在cypress.json中设置baseUrl。
+
+## 喜欢cypress的理由，总的来说，走心，各种细节的走心：
+* 文档友好。文档多处穿插小视频，上手容易。
+* 安装的cypress包里面有example可以直接运行，里面有各种浏览器交互接口。
+* cypress不依赖于selenium。cypress开箱即用，无需运行环境准备。
+* cypress是基于javascript，几乎每个web开发人员都能驾驭（有些测试想要驾驭也是可以的）。
+* 与我们已经实验过的Selenium的端到端工具相比，cypress的运行速度要快得多。每次修改会自动触发测试重新执行。测试的执行器对于测试的执行过程的可视化做的很好，便于debug。
+* cypress 的持续集成。官方文档上有各种CI环境的集成demo供参考。
+
+
 
 
 
