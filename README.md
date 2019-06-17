@@ -114,6 +114,7 @@ button.click()
 最佳实践：在cypress.json中设置baseUrl。
 
 ## 喜欢cypress的理由，总的来说，走心，各种细节的走心：
+
 * 文档友好。文档多处穿插小视频，上手容易。
 * 安装的cypress包里面有example可以直接运行，里面有各种浏览器交互接口。
 * cypress不依赖于selenium。cypress开箱即用，无需运行环境准备。
